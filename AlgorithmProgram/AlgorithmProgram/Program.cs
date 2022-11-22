@@ -16,8 +16,8 @@ namespace DataStructureAlgorithm
             bool flag = true;
             while (flag)
             {
+                Console.WriteLine("Enter option");
                 Console.WriteLine(" 1. Binary Search ");
-                Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
