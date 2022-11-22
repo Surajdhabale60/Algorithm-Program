@@ -13,9 +13,22 @@ namespace DataStructureAlgorithm
         {
             Console.WriteLine("Welcome To Algorithm Program");
 
-            BinarySearch binarysearch = new BinarySearch();
-            binarysearch.ReadTextFile(@"C:\Users\suraj\source\repos\217 .Net\Algorithm-Program\AlgorithmProgram\AlgorithmProgram\BinarySearch.txt");
-            binarysearch.BinarySearchOperation("Something");
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine(" 1. Binary Search\n 2. Insertion Sorting  ");
+                Console.WriteLine("Enter above mention option");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        BinarySearch binarysearch = new BinarySearch();
+                        binarysearch.ReadTextFile(@"C:\Users\suraj\source\repos\217 .Net\Algorithm-Program\AlgorithmProgram\AlgorithmProgram\BinarySearch.txt");
+                        binarysearch.BinarySearchOperation("Something");
+                        break;
+                }
+            }
+            
         }
     }
 }
