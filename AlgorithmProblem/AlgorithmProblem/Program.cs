@@ -7,7 +7,7 @@
             bool flag = true;
             while(flag)
             {                
-                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput");
+                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -33,6 +33,11 @@
                     case 5:
                         UserInput userInput = new UserInput();
                         userInput.ReplaceString();
+                        break;
+                    case 6:
+                        LinkedListGeneric<string> linkedListGeneric = new LinkedListGeneric<string>();
+                        linkedListGeneric.Add("Suraj");
+                        linkedListGeneric.Display();
                         break;
 
                 }
