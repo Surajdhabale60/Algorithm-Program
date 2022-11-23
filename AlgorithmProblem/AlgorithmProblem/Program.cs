@@ -7,7 +7,7 @@
             bool flag = true;
             while(flag)
             {                
-                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram");
+                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -29,6 +29,10 @@
                     case 4:
                         Anagram anagram = new Anagram();
                         anagram.CheckAnagram("heart", "earth");
+                        break;
+                    case 5:
+                        UserInput userInput = new UserInput();
+                        userInput.ReplaceString();
                         break;
 
                 }
