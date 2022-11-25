@@ -7,7 +7,7 @@
             bool flag = true;
             while(flag)
             {                
-                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric");
+                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -38,6 +38,10 @@
                         LinkedListGeneric<string> linkedListGeneric = new LinkedListGeneric<string>();
                         linkedListGeneric.Add("Suraj");
                         linkedListGeneric.Display();
+                        break;
+                    case 7:
+                        PrimeRange primeRange = new PrimeRange();
+                        primeRange.Prime();
                         break;
 
                 }
