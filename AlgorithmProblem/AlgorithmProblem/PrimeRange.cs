@@ -10,9 +10,10 @@ namespace AlgorithmProblem
     {
         public void Prime()
         {
-            int i = 2;
-            Console.WriteLine("Enter Number");
+            int i = 0;
+            Console.WriteLine("Enter Last Range Number");
             int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Entered Prime Number Range Are:");
             while (i < num)
             {
                 bool count = false;

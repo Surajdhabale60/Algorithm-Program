@@ -7,7 +7,7 @@
             bool flag = true;
             while(flag)
             {                
-                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range");
+                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range\n 8.Palindrome And Anagram");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -42,6 +42,13 @@
                     case 7:
                         PrimeRange primeRange = new PrimeRange();
                         primeRange.Prime();
+                        break;
+                    case 8:
+                        PalindromeAndAnagram palindromeAndAnagram = new PalindromeAndAnagram();
+                        palindromeAndAnagram.PrimeNumber();
+                        palindromeAndAnagram.Palindrome();
+                        palindromeAndAnagram.AnagramCheck();
+                        
                         break;
 
                 }
