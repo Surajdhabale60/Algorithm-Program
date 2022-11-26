@@ -8,13 +8,15 @@ namespace AlgorithmProblem
 {
     public class LinkedListGeneric<T>
     {
+        int count = 0;
         public Node<T> head;
-        public void Add(T data)
+        public void AddLast(T data)
         {
             Node<T> node = new Node<T>(data);
             if (this.head == null)
             {
                 this.head = node;
+                count++;
 
             }
             else
@@ -25,40 +27,50 @@ namespace AlgorithmProblem
                     temp = temp.next;
                 }
                 temp.next = node;
+                count++;
             }
-            Console.WriteLine("{0} inserted into linked list", node.data);
         }
-        public void Delete()
+        public void SearchDelete(T value)
         {
-            if (this.head == null)
+            if (head == null)
             {
                 Console.WriteLine("LinkedList is empty");
+                return;
             }
-            if (head.next == null)
+            if (count == 1)
             {
                 head = null;
+                count--;
+                return;
             }
-            Node<T> lastNode = this.head;
-            while (lastNode.next.next != null)
+            Node<T> previousNode = head;
+            Node<T> temp = head.next;
+            while (previousNode != null)
             {
-                lastNode = lastNode.next;
+                if(previousNode.data.Equals(value))
+                {
+                    temp.next = previousNode.next;
+                    previousNode = null;
+                    count--;
+                    return;
+                }
+                temp = previousNode;
+                previousNode = previousNode.next;
             }
-            lastNode.next = null;
-            Console.WriteLine("Last element is deleted successfully");
         }
         public void Display()
-        {
-            Node<T> temp = this.head;
-            if (temp == null)
+        {           
+            if (head == null)
             {
                 Console.WriteLine("Linked list empty");
                 return;
             }
-            while (temp != null)
+            while (head != null)
             {
-                Console.WriteLine(temp.data + "");
-                temp = temp.next;
+                Console.WriteLine(head.data + "");
+                head = head.next;
             }
+            Console.WriteLine("null");
         }
 
     }
