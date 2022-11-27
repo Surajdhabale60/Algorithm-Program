@@ -7,7 +7,7 @@
             bool flag = true;
             while(flag)
             {                
-                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range\n 8.Palindrome And Anagram\n 9.UnOrdered List\n 10.Balanced Parantheses");
+                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range\n 8.Palindrome And Anagram\n 9.UnOrdered List\n 10.Balanced Parantheses\n 11.Ordered List");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -56,6 +56,10 @@
                     case 10:
                         BalancedParanthesis balancedParanthesis = new BalancedParanthesis();
                         balancedParanthesis.ReadTextFile(@"C:\Users\suraj\source\repos\217 .Net\Algorithm-Program\AlgorithmProblem\AlgorithmProblem\Number.txt");
+                        break;
+                    case 11:
+                        OrderedList orderedList = new OrderedList();
+                        orderedList.ReadTextFile(@"C:\Users\suraj\source\repos\217 .Net\Algorithm-Program\AlgorithmProblem\AlgorithmProblem\Ordered.txt");
                         break;
                 }
             }
