@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblem
 {
-    internal class BinarySearch
+    public class BinarySearch
     {
         string[] binaryArr;
         public void ReadTextFile(string filePath)
