@@ -1,4 +1,6 @@
-﻿namespace AlgorithmProblem
+﻿using System;
+
+namespace AlgorithmProblem
 {
     class Program
     {
@@ -6,8 +8,8 @@
         {
             bool flag = true;
             while(flag)
-            {                
-                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range\n 8.Palindrome And Anagram\n 9.UnOrdered List\n 10.Balanced Parantheses\n 11.Ordered List\n 12.Bank Cash Counter");
+            {               
+                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range\n 8.Palindrome And Anagram\n 9.UnOrdered List\n 10.Balanced Parantheses\n 11.Ordered List\n 12.Bank Cash Counter\n 13.Merge Sort");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -64,6 +66,16 @@
                     case 12:
                         BankCounter bankCounter = new BankCounter();
                         bankCounter.Counter();
+                        break;
+                    case 13:
+                        int[] array = { 8, 5, 4, 2, 7, 3, 6, 1 };
+                        int[] array2 = { 12, 15, 14, 17, 19, 18 };
+                        MergeSort Sort = new MergeSort();
+                        Console.WriteLine("Array Before Sorting: ");
+                        Sort.Display(array);
+                        Sort.MergeSorts(array, 0, array.Length - 1);
+                        Console.WriteLine("Array after Sorting: ");
+                        Sort.Display(array);
                         break;
                 }
             }
