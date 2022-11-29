@@ -9,7 +9,7 @@ namespace AlgorithmProblem
             bool flag = true;
             while(flag)
             {               
-                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range\n 8.Palindrome And Anagram\n 9.UnOrdered List\n 10.Balanced Parantheses\n 11.Ordered List\n 12.Bank Cash Counter\n 13.Merge Sort");
+                Console.WriteLine("select option\n 1.Binary Search\n 2.Insertion Sort\n 3.Bubble Sort\n 4.Anagram\n 5.UserInput\n 6.LinkedListGeneric\n 7.Prime Range\n 8.Palindrome And Anagram\n 9.UnOrdered List\n 10.Balanced Parantheses\n 11.Ordered List\n 12.Bank Cash Counter\n 13.Merge Sort\n 14.Palindrome Check");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -76,6 +76,10 @@ namespace AlgorithmProblem
                         Sort.MergeSorts(array, 0, array.Length - 1);
                         Console.WriteLine("Array after Sorting: ");
                         Sort.Display(array);
+                        break;
+                    case 14:
+                        Palindrome palindrome = new Palindrome();
+                        palindrome.ReadAllTextFile(@"C:\Users\suraj\source\repos\217 .Net\Algorithm-Program\AlgorithmProblem\AlgorithmProblem\Palindrome.txt");
                         break;
                 }
             }
